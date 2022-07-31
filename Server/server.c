@@ -19,8 +19,6 @@ ST_accountsDB_t accountsDataBase[255] = {{342342.5, "4847 3529 8926 3094"},
 
 ST_transaction_t transactionsDataBase[255] = {{0, 0, 0, 0}};
 
-ST_storedTransaction_t storedTransaction;
-
 EN_transState_t recieveTransactionData(ST_transaction_t *transData)
 {
     transData->transState = APPROVED;
@@ -86,10 +84,12 @@ EN_serverError_t saveTransaction(ST_transaction_t *transData)
     static uint32_t sequenceNumber = 1;
     if (index < sizeof(transactionsDataBase) / sizeof(ST_transaction_t))
     {
+        transData->transactionSequenceNumber = sequenceNumber;
         transactionsDataBase[index].cardHolderData = transData->cardHolderData;
         transactionsDataBase[index].terminalData = transData->terminalData;
         transactionsDataBase[index].transState = transData->transState;
         transactionsDataBase[index].transactionSequenceNumber = transData->transactionSequenceNumber;
+        printf("Transaction sequence number: %d\n", transactionsDataBase[index].transactionSequenceNumber);
         sequenceNumber++;
         index++;
         return TERMINAL_OK;
@@ -99,9 +99,14 @@ EN_serverError_t saveTransaction(ST_transaction_t *transData)
 
 EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transaction_t *transData)
 {
-    uint8_t start = 0, end = sizeof(transactionsDataBase) / sizeof(ST_transaction_t), middle = (start + end) / 2;
+    uint8_t start = 0, end = 0, middle, iterator = 0;
     sint8_t index = -1;
     // binary search
+    while (transactionsDataBase[end].transactionSequenceNumber != 0)
+    {
+        end++;
+    }
+    middle = (start + end) / 2;
     while (start <= end)
     {
         if (transactionSequenceNumber == transactionsDataBase[middle].transactionSequenceNumber)
@@ -123,14 +128,14 @@ EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transacti
     // Check if the value of search was found or not
     if (index == -1)
     {
+        printf("Not found!\n");
         return TRANSACTION_NOT_FOUND;
     }
     else
     {
-        storedTransaction.cardHolderData = transData->cardHolderData;
-        storedTransaction.terminalData = transData->terminalData;
-        storedTransaction.transactionSequenceNumber = transData->transactionSequenceNumber;
-        storedTransaction.transState = transData->transState;
+        printf("transaction sequence number: %d\n", transactionsDataBase[index].transactionSequenceNumber);
+        printf("%s\n",transactionsDataBase[index].terminalData.transactionDate);
+        printf("%.2f\n",transactionsDataBase[index].terminalData.transAmount);
         return SERVER_OK;
     }
 }
