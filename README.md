@@ -47,8 +47,17 @@ There are different types of transactions you can make, SALE, REFUND, Pre-Author
 2. Implement appStart function.
 
 ### Testing
-1. Transaction approved user story.
-2. Exceed the maximum amount user story.
-3. Insufficient fund user story.
-4. Expired card user story.
-5. Invalid card user story.
+#### 1. Transaction approved user story.
+As a bank customer have an account and has a valid and not expired card, I want to withdraw an amount of money less than the maximum allowed and less than or equal to the amount in my balance, so that I am expecting that the transaction is approved and my account balance is reduced by the withdrawn amount.
+
+#### 2. Exceed the maximum amount user story.
+As a bank customer have an account, that has a valid and not expired card, I want to withdraw an amount of money that exceeds the maximum allowed amount so that I am expecting that the transaction declined.
+
+#### 3. Insufficient fund user story.
+As a bank customer have an account and has a valid and not expired card, I want to withdraw an amount of money less than the maximum allowed and larger than the amount in my balance so that I am expecting that the transaction declined.
+
+#### 4. Expired card user story.
+As a bank customer have an account, have a valid but expired card, I want to withdraw an amount of money so that I expect that the transaction declined.
+
+#### 5. Invalid card user story.
+As a bank customer have an account and has a valid and not expired stolen card, I want to block anyone from using my card so that I am expecting that any transaction made by this card is declined.
