@@ -11,7 +11,7 @@ There are different types of transactions you can make, SALE, REFUND, Pre-Author
 
 ## The project can be distributed over 6 main tasks:
 
-<img src="https://github.com/HosamAyoub/Photos/blob/main/PaymentApplication/payment-flowchart.jpeg?raw=true" title = "System flow chart"> 
+<img src="https://github.com/HosamAyoub/Photos/blob/main/Payment-Application/payment-flowchart.jpeg?raw=true" title = "System flow chart"> 
 
 ### Development environment preparation
 1. Create modules folders.
