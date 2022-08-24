@@ -20,13 +20,13 @@ There are different types of transactions you can make, SALE, REFUND, Pre-Author
 4. Create the main.c file.
 
 ### Card module
-1. Fill in card.h file with functions' prototypes and typedefs.
+1. In card.h file contains functions' prototypes and typedefs.
 2. Implement getCardHolderName function.
 3. Implement getCardExpiryDate function.
 4. Implement getCardPAN function.
 
 ### Terminal module
-1. Fill in terminal.h file with functions' prototypes and typedefs.
+1. In terminal.h file contains functions' prototypes and typedefs.
 2. Implement getTransactionDate function.
 3. Implement isCardExpried function.
 4. Implement gatTransactionAmount function.
@@ -34,7 +34,7 @@ There are different types of transactions you can make, SALE, REFUND, Pre-Author
 6. Implement setMaxAmount function.
 
 ### Server module
-1. Fill in server.h file with functions' prototypes and typedefs.
+1. In server.h file contains functions' prototypes and typedefs.
 2. Implement server-side accounts' database.
 3. Implement server-side transactions' database.
 4. Implement recieveTransactionData function.
@@ -43,12 +43,12 @@ There are different types of transactions you can make, SALE, REFUND, Pre-Author
 7. Implement saveTransaction function.
 
 ### Application
-1. Fill in application.h file with functions' prototypes
-2. Implement appStart function
+1. In application.h file contains functions' prototypes.
+2. Implement appStart function.
 
 ### Testing
-1. Transaction approved user story
-2. Exceed the maximum amount user story
-3. Insufficient fund user story
-4. Expired card user story
-5. Invalid card user story
+1. Transaction approved user story.
+2. Exceed the maximum amount user story.
+3. Insufficient fund user story.
+4. Expired card user story.
+5. Invalid card user story.
