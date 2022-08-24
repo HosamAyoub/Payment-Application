@@ -42,11 +42,11 @@ Implemented the SALE transaction only by simulating the card, terminal(ATM), and
 6. Implement isAmountAvailable function.
 7. Implement saveTransaction function.
 
-### Implement the application
+### Application
 1. Fill in application.h file with functions' prototypes
 2. Implement appStart function
 
-### Testing the application
+### Testing
 1. Transaction approved user story
 2. Exceed the maximum amount user story
 3. Insufficient fund user story
