@@ -1,4 +1,6 @@
 # PaymentApplication
+Implemented the SALE transaction only by simulating the card, terminal(ATM), and the server.  
+
 Payment systems are now available everywhere and everyone interacts with these systems every day.  
 There are different types of transactions you can make, SALE, REFUND, Pre-Authorization, and VOID.
 
@@ -6,8 +8,6 @@ There are different types of transactions you can make, SALE, REFUND, Pre-Author
 * REFUND: this means that you will return something and wants your money back to your bank account.
 * Pre-Authorization: means holding an amount of money from your account, e.g Hotel reservation.
 * VOID: this means canceling the transaction, e.g if the seller entered the wrong amount.  
-
-Implemented the SALE transaction only by simulating the card, terminal(ATM), and the server.  
 
 ## The project can be distributed over 6 main tasks:
 
