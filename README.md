@@ -1,4 +1,4 @@
-# PaymentApplication
+# Payment Application
 Implemented the SALE transaction only by simulating the card, terminal(ATM), and the server.  
 
 Payment systems are now available everywhere and everyone interacts with these systems every day.  
